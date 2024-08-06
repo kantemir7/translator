@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: admin
+      changes:
+        - createTable:
+            tableName: translation_request
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: ip_address
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: source_text
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: translated_text
+                  type: TEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: request_time
+                  type: TIMESTAMP
+                  constraints:
+                    nullable: false
